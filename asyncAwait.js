@@ -83,9 +83,23 @@ async function fetchUsers(){
     //because we use two .then with fetch API method the first is to convert is to json and the second is to use the response itself
     //here we will make a res var to hold the return promise of the fetch method then we will convert it to json with this var
 
+
+    /*
+    Once you mark a function as 'async' you have access to the keywords await, try, and catch.
+    */ 
+
+
     const res = await fetch('https://jsonplaceholder.typicode.com/users');
-    const data = await res.json();
-    console.log(data);
+    try{
+
+        const data = await res.json();
+        console.log(data);
+
+    }
+
+    catch(error){
+        console.log('error', error);
+    }
 
     /*
     this is instead of 
