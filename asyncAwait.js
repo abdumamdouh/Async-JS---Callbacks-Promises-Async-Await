@@ -84,7 +84,7 @@ async function fetchUsers(){
     //here we will make a res var to hold the return promise of the fetch method then we will convert it to json with this var
 
     const res = await fetch('https://jsonplaceholder.typicode.com/users');
-    const data = res.json();
+    const data = await res.json();
     console.log(data);
 
     /*
